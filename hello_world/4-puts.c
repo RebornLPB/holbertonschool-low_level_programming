@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- *
+ * Description: Print some words with puts.
  * Return: Always 0 (Success)
  */
 int main(void)

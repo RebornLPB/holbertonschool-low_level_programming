@@ -3,6 +3,7 @@
 /**
  * main - Entry point
  *
+ * Description: Print some words.
  * Return: Always 0 (Success)
  */
 

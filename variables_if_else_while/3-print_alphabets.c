@@ -25,9 +25,9 @@ int main(void)
 		}
 		else if (mode == 1 && letter > 'Z')
 		{
+			putchar('\n');
 			mode = 2;
 		}
 	}
-	putchar('\n');
 	return (0);
 }

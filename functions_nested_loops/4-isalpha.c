@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _islower - Check if input is a letter.
+ * _isalpha - Check if input is a letter.
  * @c: The character to check.
  *
  * Description: Check if the input is a letter.
  * Return: 1 if c is letter, 0 otherwise.
  */
 
-int _islower(int c)
+int _isalpha(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{

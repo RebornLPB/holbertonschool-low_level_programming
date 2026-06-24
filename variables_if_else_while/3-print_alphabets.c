@@ -20,7 +20,7 @@ int main(void)
 		letter++;
 		if (mode == 0 && letter > 'z')
 		{
-			letter = "A";
+			letter = 'A';
 			mode = 1;
 		}
 		else if (mode == 1 && letter > 'Z')

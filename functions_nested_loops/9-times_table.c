@@ -27,8 +27,17 @@ void times_table(void)
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar(value);
+				if (value < 10)
+				{
+					_putchar(value);
+				}
+				else
+				{
+					_putchar(value + '0');
+					_putchar(value + '0');
+				}
 			}
 		}
+		_putchar('/n');
 	}
 }

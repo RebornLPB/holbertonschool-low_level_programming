@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
- * _mul - Multiply two integers.
- * @o: The first value
- * @t: The first value
+ * mul - Multiply two integers.
+ * @a: The first value
+ * @b: The first value
  *
  * Return: 1 if c is a digit, 0 otherwise
  */
 
 
-int _mul(int o, int t)
+int mul(int a, int b)
 {
-	int result = o * t;
+	int result = a * b;
 
 	return (result);
 }

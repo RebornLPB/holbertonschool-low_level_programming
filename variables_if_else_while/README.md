@@ -1,38 +1,38 @@
 # 0x01. C - Variables, if, else, while
 
-Ce projet approfondit la logique de programmation en C en se concentrant sur la manipulation des variables, les structures conditionnelles (`if`, `else`) et les boucles de contrôle (`while`). L'objectif est de maîtriser les opérateurs logiques, relationnels et les tables ASCII sans utiliser de fonctions complexes.
+This project deepens C programming logic by focusing on variable manipulation, conditional structures (`if`, `else`), and control loops (`while`). The goal is to master logical and relational operators and ASCII tables without using complex functions.
 
-## 📝 Concepts Clés
+## 📝 Key Concepts
 
-* **Conditions complexes :** Implémentation de structures décisionnelles imbriquées ou chaînées.
-* **Boucles de contrôle :** Répétition d'instructions avec `while` et gestion des incrémentations.
-* **Table ASCII :** Manipulation directe des valeurs entières des caractères (ex: `'a'` vaut `97`) pour effectuer des opérations arithmétiques sur les lettres.
+* **Complex conditions:** Implementing nested or chained decision structures.
+* **Control loops:** Repeating instructions with `while` and managing increments.
+* **ASCII table:** Direct manipulation of character integer values (e.g. `'a'` equals `97`) to perform arithmetic operations on letters.
 
-## 🛠️ Spécifications et Contraintes
+## 🛠️ Specifications and Constraints
 
-* **Norme :** Respect strict du style **Betty**.
-* **Fonction Autorisée :** Seule la fonction `putchar` est autorisée pour l'affichage (interdiction d'utiliser `printf`, `puts`, ou toute autre fonction de la bibliothèque standard, sauf mention contraire).
-* **Limitation :** Tu ne peux utiliser `putchar` qu'un nombre très limité de fois par fichier (souvent un maximum de 3 ou 4 fois selon l'exercice).
+* **Style:** Strict adherence to the **Betty** style.
+* **Allowed function:** Only `putchar` is allowed for output (no `printf`, `puts`, or any other standard library function unless explicitly allowed).
+* **Limitation:** You can only use `putchar` a very limited number of times per file (often a maximum of 3 or 4 times depending on the exercise).
 
-## 📁 Liste des Fichiers & Tâches
+## 📁 File & Task List
 
-| Fichier | Objectif | Description |
+| File | Objective | Description |
 | :--- | :--- | :--- |
-| `0-positive_or_negative.c` | Affectation & Condition | Assigne un nombre aléatoire à une variable et affiche s'il est positif, négatif ou nul. |
-| `1-last_digit.c` | Modulo & Condition | Récupère le dernier chiffre d'un nombre aléatoire et applique une condition sur sa valeur. |
-| `2-print_alphabet.c` | Boucle & ASCII | Affiche l'alphabet en minuscules, suivi d'une nouvelle ligne. |
-| `3-print_alphabets.c` | Boucle & ASCII | Affiche l'alphabet en minuscules, puis en majuscules, suivis d'une nouvelle ligne. |
-| `4-print_alphabt.c` | Condition dans Boucle | Affiche l'alphabet en minuscules en excluant les lettres `q` et `e`. |
-| `5-print_numbers.c` | Boucle | Affiche tous les nombres de base 10 (0 à 9) suivis d'une nouvelle ligne. |
-| `6-print_numberz.c` | Boucle & ASCII | Affiche tous les nombres de base 10 (0 à 9) en utilisant uniquement `putchar` (sans variable de type `char`). |
-| `7-print_tebahpla.c` | Boucle inversée | Affiche l'alphabet en minuscules à l'envers. |
-| `8-print_base16.c` | Boucle | Affiche tous les nombres de la base 16 (hexadécimal) en minuscules (0-9, a-f). |
-| `9-print_comb.c` | Combinaisons | Affiche toutes les combinaisons possibles de chiffres uniques (0 à 9), séparés par une virgule et un espace. |
-| `100-print_comb3.c` | Tâche Avancée | Affiche toutes les combinaisons possibles de deux chiffres différents (ex: `01` et `10` sont considérés comme identiques, seul `01` est affiché). |
-| `101-print_comb4.c` | Tâche Avancée | Affiche toutes les combinaisons possibles de trois chiffres différents. |
-| `102-print_comb5.c` | Tâche Avancée | Affiche toutes les combinaisons possibles de deux paires de deux chiffres (ex: `00 01`, `00 02`...). |
+| `0-positive_or_negative.c` | Assignment & Condition | Assigns a random number to a variable and prints whether it is positive, negative, or zero. |
+| `1-last_digit.c` | Modulo & Condition | Gets the last digit of a random number and applies a condition to its value. |
+| `2-print_alphabet.c` | Loop & ASCII | Prints the alphabet in lowercase, followed by a new line. |
+| `3-print_alphabets.c` | Loop & ASCII | Prints the alphabet in lowercase, then uppercase, followed by a new line. |
+| `4-print_alphabt.c` | Condition in Loop | Prints the alphabet in lowercase excluding the letters `q` and `e`. |
+| `5-print_numbers.c` | Loop | Prints all base 10 digits (0 to 9) followed by a new line. |
+| `6-print_numberz.c` | Loop & ASCII | Prints all base 10 digits (0 to 9) using only `putchar` (without a `char` variable). |
+| `7-print_tebahpla.c` | Reverse loop | Prints the alphabet in lowercase in reverse. |
+| `8-print_base16.c` | Loop | Prints all base 16 digits (hexadecimal) in lowercase (0-9, a-f). |
+| `9-print_comb.c` | Combinations | Prints all possible combinations of unique digits (0 to 9), separated by a comma and a space. |
+| `100-print_comb3.c` | Advanced task | Prints all possible combinations of two different digits (e.g. `01` and `10` are considered the same, only `01` is printed). |
+| `101-print_comb4.c` | Advanced task | Prints all possible combinations of three different digits. |
+| `102-print_comb5.c` | Advanced task | Prints all possible combinations of two pairs of two digits (e.g. `00 01`, `00 02`...). |
 
-## 🚀 Compilation Standard
+## 🚀 Standard Compilation
 
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 2-print_alphabet.c -o alphabet

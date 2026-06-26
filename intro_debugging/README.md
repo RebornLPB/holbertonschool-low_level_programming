@@ -1,23 +1,23 @@
 # Intro Debugging
 
-Ce dépôt est dédié à l'apprentissage et à la pratique des techniques de débogage fondamentales en langage C. L'objectif est d'apprendre à identifier, analyser et corriger les bugs structurels et logiques dans le code.
+This repository is dedicated to learning and practicing fundamental debugging techniques in C. The goal is to learn how to identify, analyze, and fix structural and logical bugs in code.
 
 ## 📝 Description
 
-Le projet contient des exercices pratiques visant à :
-* Comprendre le flux d'exécution d'un programme.
-* Analyser les conditions de boucles et les valeurs de retour erronées.
-* Utiliser des commentaires de documentation stricts (style Betty/DocBlock) pour clarifier l'intention du code par rapport à son comportement réel.
+The project contains practical exercises aimed at:
+* Understanding the execution flow of a program.
+* Analyzing loop conditions and incorrect return values.
+* Using strict documentation comments (Betty/DocBlock style) to clarify the intended behavior of the code versus its actual behavior.
 
-## 🛠️ Technologies & Outils
+## 🛠️ Technologies & Tools
 
-* **Langage :** C (C99)
-* **Compilateur :** `gcc`
-* **Options de compilation suggérées :** `-Wall -Werror -Wextra -pedantic -std=gnu89`
+* **Language :** C (C99)
+* **Compiler :** `gcc`
+* **Suggested compilation options :** `-Wall -Werror -Wextra -pedantic -std=gnu89`
 
-## 🚀 Utilisation
+## 🚀 Usage
 
-Pour compiler un fichier spécifique du dossier, utilise la commande suivante dans ton terminal :
+To compile a specific file in this folder, use the following command in your terminal:
 
 ```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 <nom_du_fichier.c> -o <nom_de_l_output>
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 <filename.c> -o <output>

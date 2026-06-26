@@ -1,40 +1,40 @@
 # 0x02. C - Functions, nested loops
 
-Ce dossier est dédié à l'apprentissage des fonctions en C et à la manipulation des boucles imbriquées (`nested loops`). L'objectif est de comprendre comment modulariser le code et gérer des structures algorithmiques bidimensionnelles ou répétitives.
+This repository is dedicated to learning functions in C and mastering the manipulation of nested loops. The objective is to understand how to modularize code and manage two-dimensional or repetitive algorithmic structures.
 
-## 📝 Concepts Clés
+## 📝 Key Concepts
 
-* **Prototypes de Fonctions :** Déclaration des fonctions dans un fichier d'en-tête (`main.h`) pour permettre leur utilisation à travers plusieurs fichiers sources.
-* **Boucles Imbriquées :** Utilisation de boucles dans d'autres boucles (ex: `for` ou `while` imbriqués) pour générer des matrices, des tables de multiplication ou des motifs complexes.
-* **Header Files (`main.h`) :** Centralisation des prototypes de toutes les fonctions personnalisées, y compris la fonction native `_putchar`.
+* **Function Prototypes:** Declaring functions within a header file (`main.h`) to enable their usage across multiple source files.
+* **Nested Loops:** Utilizing loops inside other loops (e.g., nested `for` or `while` statements) to generate matrices, multiplication tables, or complex patterns.
+* **Header Files (`main.h`):** Centralizing prototypes for all custom functions, including the native `_putchar` function.
 
-## 🛠️ Spécifications et Contraintes
+## 🛠️ Specifications and Constraints
 
-* **Norme :** Respect strict du style **Betty**.
-* **Fonction Autorisée :** Seule la fonction `_putchar` est autorisée pour l'affichage (interdiction d'utiliser `printf`, `puts`, etc., sauf mention contraire).
-* **Fichiers de Test :** Les fichiers de test fournis par l'école (ex: `0-main.c`) ne doivent pas être poussés sur le dépôt distant.
+* **Coding Style:** Strict compliance with the **Betty** style guide.
+* **Allowed Functions:** Only the `_putchar` function is allowed for standard output (using `printf`, `puts`, etc., is forbidden unless specified otherwise).
+* **Test Files:** Main tester files provided by the school (e.g., `0-main.c`) must not be pushed to the remote repository.
 
-## 📁 Liste des Fichiers & Tâches
+## 📁 File List & Tasks
 
-| Fichier | Fonction / Objectif | Description |
+| File | Function / Objective | Description |
 | :--- | :--- | :--- |
-| `_putchar.c` | `int _putchar(char c)` | Écrit le caractère `c` sur la sortie standard. |
-| `0-putchar.c` | `main` | Programme qui affiche `_putchar`, suivi d'une nouvelle ligne. |
-| `1-alphabet.c` | `void print_alphabet(void)` | Affiche l'alphabet en minuscules suivi d'une nouvelle ligne. |
-| `2-print_alphabet_x10.c` | `void print_alphabet_x10(void)` | Affiche 10 fois l'alphabet en minuscules en utilisant des boucles imbriquées. |
-| `3-islower.c` | `int _islower(int c)` | Vérifie si un caractère est en minuscule (renvoie `1` si oui, `0` sinon). |
-| `4-isalpha.c` | `int _isalpha(int c)` | Vérifie si un caractère est une lettre (majuscule ou minuscule). |
-| `5-sign.c` | `int print_sign(int n)` | Affiche le signe d'un nombre (`+`, `0`, `-`) et renvoie sa polarité. |
-| `6-abs.c` | `int _abs(int)` | Calcule la valeur absolue d'un entier. |
-| `7-print_last_digit.c` | `int print_last_digit(int)` | Affiche et renvoie le dernier chiffre d'un nombre. |
-| `8-24_hours.c` | `void jack_bauer(void)` | Affiche chaque minute de la journée de 00:00 à 23:59. |
-| `9-times_table.c` | `void times_table(void)` | Affiche la table de multiplication de 0 à 9, formatée avec des virgules et des espaces. |
-| `10-add.c` | `int add(int, int)` | Additionne deux entiers et renvoie le résultat. |
-| `11-print_to_98.c` | `void print_to_98(int n)` | Affiche tous les nombres naturels de `n` jusqu'à `98`, séparés par des virgules. |
+| `_putchar.c` | `int _putchar(char c)` | Writes the character `c` to the standard output. |
+| `0-putchar.c` | `main` | Program that prints `_putchar`, followed by a new line. |
+| `1-alphabet.c` | `void print_alphabet(void)` | Prints the alphabet in lowercase, followed by a new line. |
+| `2-print_alphabet_x10.c` | `void print_alphabet_x10(void)` | Prints the lowercase alphabet 10 times using nested loops. |
+| `3-islower.c` | `int _islower(int c)` | Checks for a lowercase character (returns `1` if true, `0` otherwise). |
+| `4-isalpha.c` | `int _isalpha(int c)` | Checks for an alphabetic character (both lowercase and uppercase). |
+| `5-sign.c` | `int print_sign(int n)` | Prints the sign of a number (`+`, `0`, `-`) and returns its polarity value. |
+| `6-abs.c` | `int _abs(int)` | Computes the absolute value of an integer. |
+| `7-print_last_digit.c` | `int print_last_digit(int)` | Prints and returns the last digit of a number. |
+| `8-24_hours.c` | `void jack_bauer(void)` | Prints every minute of the day from 00:00 to 23:59. |
+| `9-times_table.c` | `void times_table(void)` | Prints the 9 times table, starting with 0, formatted with commas and spaces. |
+| `10-add.c` | `int add(int, int)` | Adds two integers and returns the result. |
+| `11-print_to_98.c` | `void print_to_98(int n)` | Prints all natural numbers from `n` to `98`, separated by commas. |
 
 ## 🚀 Compilation
 
-Exemple de compilation standard pour ce module :
+Standard compilation example for this module:
 
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 _putchar.c 0-putchar.c -o 0-putchar

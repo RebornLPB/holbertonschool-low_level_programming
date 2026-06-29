@@ -87,6 +87,11 @@ int main(void)
 	double process_seconds;
 	double reduce_seconds;
 
+	total_seconds   = (global_end - global_start) / CLOCKS_PER_SEC;
+    build_seconds   = (build_end - build_start) / CLOCKS_PER_SEC;
+    process_seconds = (process_end - process_start) / CLOCKS_PER_SEC;
+    reduce_seconds  = (reduce_end - reduce_start) / CLOCKS_PER_SEC;
+
 	printf("TOTAL seconds: %.6f\n", total_seconds);
 	printf("BUILD_DATA seconds: %.6f\n", build_seconds);
 	printf("PROCESS seconds: %.6f\n", process_seconds);

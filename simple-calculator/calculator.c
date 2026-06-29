@@ -78,7 +78,10 @@ int main(void)
 			scanf("%f", &nb1);
 			printf("Number two:");
 			scanf("%f", &nb2);
-
+			if (nb1 == 0 || nb2 == 0)
+			{
+				printf("Error: division by zero");
+			}
 			result = nb1 / nb2;
 
 			printf("\n> Resultat : %.2f / %.2f = %.2f\n", nb1, nb2, result);

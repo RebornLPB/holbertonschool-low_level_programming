@@ -5,104 +5,154 @@
 /* main - entry point for the simple calculator program */
 int main(void)
 {
-	int choice = -1;
-	float nb1, nb2, result;
+    int choice = -1;
+    float nb1, nb2, result;
+    char c;
 
-	printf("Welcome into the simple calculator made with ♥ in C.");
-	fflush(stdout);
-	sleep(3);
-	system("clear");
-	while (1)
-	{
-		printf("Simple Calculator\n");
-		printf("1) Add\n2) Subtract\n3) Multiply\n4) Divide\n0) Quit\n");
-		scanf("%d", &choice);
+    printf("Welcome into the simple calculator made with ♥ in C.");
+    fflush(stdout);
+    sleep(3);
+    system("clear");
+    while (1)
+    {
+        printf("Simple Calculator\n");
+        printf("1) Add\n2) Subtract\n3) Multiply\n4) Divide\n0) Quit\n");
+        printf("Choice: ");
 
-		if (choice == 1)
-		{
-			system("clear");
-			printf("1 | Add\n");
-			printf("Number one:");
-			scanf("%f", &nb1);
-			printf("Number two:");
-			scanf("%f", &nb2);
+        /* Si scanf ne renvoie pas 1, l'entrée est invalide (ex: une lettre) */
+        if (scanf("%d", &choice) != 1)
+        {
+            printf("Invalid choice\n");
+            /* Nettoyage du tampon stdin pour consommer les caractères invalides */
+            while ((c = getchar()) != '\n' && c != EOF);
+            continue; /* On recommence la boucle du menu */
+        }
 
-			result = nb1 + nb2;
+        if (choice == 1)
+        {
+            system("clear");
+            printf("1 | Add\n");
+            
+            printf("A: ");
+            while (scanf("%f", &nb1) != 1)
+            {
+                printf("Invalid number\nA: ");
+                while ((c = getchar()) != '\n' && c != EOF);
+            }
 
-			printf("\n> Resultat : %.2f + %.2f = %.2f\n", nb1, nb2, result);
-			printf("\nRetour au menu dans 3 secondes...");
-			fflush(stdout);
-			sleep(3);
-			system("clear");
-		}
-		else if (choice == 2)
-		{
-			system("clear");
-			printf("2 | Substract\n");
-			printf("Number one:");
-			scanf("%f", &nb1);
-			printf("Number two:");
-			scanf("%f", &nb2);
+            printf("B: ");
+            while (scanf("%f", &nb2) != 1)
+            {
+                printf("Invalid number\nB: ");
+                while ((c = getchar()) != '\n' && c != EOF);
+            }
 
-			result = nb1 - nb2;
+            result = nb1 + nb2;
 
-			printf("\n> Resultat : %.2f - %.2f = %.2f\n", nb1, nb2, result);
-			printf("\nRetour au menu dans 3 secondes...");
-			fflush(stdout);
-			sleep(3);
-			system("clear");
-		}
-		else if (choice == 3)
-		{
-			system("clear");
-			printf("3 | Multiply\n");
-			printf("Number one:");
-			scanf("%f", &nb1);
-			printf("Number two:");
-			scanf("%f", &nb2);
+            printf("\n> Resultat : %.2f + %.2f = %.2f\n", nb1, nb2, result);
+            printf("\nRetour au menu dans 3 secondes...");
+            fflush(stdout);
+            sleep(3);
+            system("clear");
+        }
+        else if (choice == 2)
+        {
+            system("clear");
+            printf("2 | Subtract\n");
+            
+            printf("A: ");
+            while (scanf("%f", &nb1) != 1)
+            {
+                printf("Invalid number\nA: ");
+                while ((c = getchar()) != '\n' && c != EOF);
+            }
 
-			result = nb1 * nb2;
+            printf("B: ");
+            while (scanf("%f", &nb2) != 1)
+            {
+                printf("Invalid number\nB: ");
+                while ((c = getchar()) != '\n' && c != EOF);
+            }
 
-			printf("\n> Resultat : %.2f * %.2f = %.2f\n", nb1, nb2, result);
-			printf("\nRetour au menu dans 3 secondes...");
-			fflush(stdout);
-			sleep(3);
-			system("clear");
+            result = nb1 - nb2;
 
-		}
-		else if (choice == 4)
-		{
-			system("clear");
-			printf("4 | Divide\n");
-			printf("Number one:");
-			scanf("%f", &nb1);
-			printf("Number two:");
-			scanf("%f", &nb2);
-			if (nb1 == 0 || nb2 == 0)
-			{
-				printf("Error: division by zero");
-			}
-			result = nb1 / nb2;
+            printf("\n> Resultat : %.2f - %.2f = %.2f\n", nb1, nb2, result);
+            printf("\nRetour au menu dans 3 secondes...");
+            fflush(stdout);
+            sleep(3);
+            system("clear");
+        }
+        else if (choice == 3)
+        {
+            system("clear");
+            printf("3 | Multiply\n");
+            
+            printf("A: ");
+            while (scanf("%f", &nb1) != 1)
+            {
+                printf("Invalid number\nA: ");
+                while ((c = getchar()) != '\n' && c != EOF);
+            }
 
-			printf("\n> Resultat : %.2f / %.2f = %.2f\n", nb1, nb2, result);
-			printf("\nRetour au menu dans 3 secondes...");
-			fflush(stdout);
-			sleep(3);
-			system("clear");
+            printf("B: ");
+            while (scanf("%f", &nb2) != 1)
+            {
+                printf("Invalid number\nB: ");
+                while ((c = getchar()) != '\n' && c != EOF);
+            }
 
-		}
-		else if (choice == 0)
-		{
-			printf("Choix 0\n");
-			sleep(1);
-			system("clear");
-			printf("Bye!");
-			exit(0);
-		}
-		else 
-		{
-			printf(" Invalid choice.");
-		}
-	}
-	return (0);
+            result = nb1 * nb2;
+
+            printf("\n> Resultat : %.2f * %.2f = %.2f\n", nb1, nb2, result);
+            printf("\nRetour au menu dans 3 secondes...");
+            fflush(stdout);
+            sleep(3);
+            system("clear");
+        }
+        else if (choice == 4)
+        {
+            system("clear");
+            printf("4 | Divide\n");
+            
+            printf("A: ");
+            while (scanf("%f", &nb1) != 1)
+            {
+                printf("Invalid number\nA: ");
+                while ((c = getchar()) != '\n' && c != EOF);
+            }
+
+            printf("B: ");
+            while (scanf("%f", &nb2) != 1)
+            {
+                printf("Invalid number\nB: ");
+                while ((c = getchar()) != '\n' && c != EOF);
+            }
+
+            if (nb2 == 0)
+            {
+                printf("Error: division by zero\n");
+            }
+            else
+            {
+                result = nb1 / nb2;
+                printf("\n> Resultat : %.2f / %.2f = %.2f\n", nb1, nb2, result);
+            }
+
+            printf("\nRetour au menu dans 3 secondes...");
+            fflush(stdout);
+            sleep(3);
+            system("clear");
+        }
+        else if (choice == 0)
+        {
+            system("clear");
+            printf("Bye!\n");
+            exit(0);
+        }
+        else 
+        {
+            printf("Invalid choice\n");
+        }
+    }
+    return (0);
 }

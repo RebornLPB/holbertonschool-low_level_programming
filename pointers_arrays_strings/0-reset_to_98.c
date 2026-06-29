@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- * reset_to_98 - Met à jour la valeur pointée par le pointeur à 98.
- * @n: Un pointeur vers un entier.
+ * reset_to_98 - Updates the value it points to to 98.
+ * @n: A pointer to an int.
+ *
+ * Return: void.
  */
 void reset_to_98(int *n)
 {

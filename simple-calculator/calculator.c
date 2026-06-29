@@ -88,13 +88,17 @@ int main(void)
 			system("clear");
 
 		}
-		else
+		else if (choice == 0)
 		{
 			printf("Choix 0\n");
 			sleep(1);
 			system("clear");
 			printf("Bye!");
 			exit(0);
+		}
+		else 
+		{
+			printf(" Invalid choice.");
 		}
 	}
 	return (0);

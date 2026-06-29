@@ -65,15 +65,19 @@ int main(void)
     double reduce_seconds;
 
     global_start = clock();
+    
     build_start = clock();
     build_dataset();
     build_end = clock();
+    
     process_start = clock();
     process_dataset();
     process_end = clock();
+    
     reduce_start = clock();
     checksum = reduce_checksum();
     reduce_end = clock();
+    
     global_end = clock();
 	if (checksum == 0ul)
 		printf("impossible\n");
@@ -83,10 +87,10 @@ int main(void)
 	double process_seconds;
 	double reduce_seconds;
 
-	printf("TOTAL seconds: %.1f\n", total_seconds);
-	printf("BUILD_DATA seconds: %.1f\n", build_seconds);
-	printf("PROCESS seconds: %.1f\n", process_seconds);
-	printf("REDUCE seconds: %.1f\n", reduce_seconds);
+	printf("TOTAL seconds: %.6f\n", total_seconds);
+	printf("BUILD_DATA seconds: %.6f\n", build_seconds);
+	printf("PROCESS seconds: %.6f\n", process_seconds);
+	printf("REDUCE seconds: %.6f\n", reduce_seconds);
 	/* Required output (exact format, no extra lines):
 	 * TOTAL seconds: <float>
 	 * BUILD_DATA seconds: <float>

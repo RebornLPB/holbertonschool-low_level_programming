@@ -5,6 +5,9 @@
 
 static int data[ARRAY_SIZE];
 
+/**
+ * initialize_data - initialize the global data array with ascending values.
+ */
 static void initialize_data(void)
 {
 	int i;
@@ -13,6 +16,10 @@ static void initialize_data(void)
 		data[i] = i;
 }
 
+/**
+ * count_even_naive - count even numbers using a nested-loop approach.
+ * Return: the total count of even numbers.
+ */
 static int count_even_naive(void)
 {
 	int count;
@@ -30,9 +37,13 @@ static int count_even_naive(void)
 		}
 	}
 
-	return count;
+	return (count);
 }
 
+/**
+ * count_even_single_pass - count even numbers in a single pass.
+ * Return: the total count of even numbers.
+ */
 static int count_even_single_pass(void)
 {
 	int count;
@@ -46,9 +57,13 @@ static int count_even_single_pass(void)
 			count++;
 	}
 
-	return count;
+	return (count);
 }
 
+/**
+ * main - benchmark two counting algorithms and print their results.
+ * Return: always 0.
+ */
 int main(void)
 {
 	clock_t start;
@@ -75,5 +90,5 @@ int main(void)
 	printf("Single-pass algorithm result: %d\n", result_b);
 	printf("Single-pass algorithm time: %.6f seconds\n", elapsed_b);
 
-	return 0;
+	return (0);
 }

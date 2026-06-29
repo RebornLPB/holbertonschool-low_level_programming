@@ -3,9 +3,14 @@
 
 #define ITERATION_COUNT 100000000UL
 
+/**
+ * main - entry point for benchmark loop timing
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	volatile unsigned long long result;
+	unsigned long long result;
 	clock_t start;
 	clock_t end;
 	double elapsed;
@@ -24,6 +29,7 @@ int main(void)
 
 	printf("Iterations: %lu\n", (unsigned long)ITERATION_COUNT);
 	printf("Execution time: %.6f seconds\n", elapsed);
+	printf("Result: %llu\n", result);
 
-	return 0;
+	return (0);
 }

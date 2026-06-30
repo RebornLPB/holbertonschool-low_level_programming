@@ -32,9 +32,5 @@ int _atoi(char *s)
 		i++;
 	}
 
-	if (signe >= 0)
-	{
-		return (-result);
-	}
-	return (result);
+	return (result * signe);
 }

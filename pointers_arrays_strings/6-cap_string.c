@@ -34,7 +34,7 @@ char *cap_string(char *str)
 {
 	int i = 0;
 
-	if (str[i] >= 65 && str[i] <= 90)
+	if (str[i] >= 97 && str[i] <= 122)
 	{
 		str[i] -= 32;
 	}
@@ -42,7 +42,7 @@ char *cap_string(char *str)
 
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 65 && str[i] <= 90)
+		if (str[i] >= 97 && str[i] <= 122)
 		{
 			if (is_separator(str[i - 1]))
 			{

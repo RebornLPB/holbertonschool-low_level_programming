@@ -9,12 +9,13 @@
 char *leet(char *str)
 {
 	int i = 0;
-	int j = 0;
+	int j;
 	char find[] = "aAeEoOtTlL";
 	char replace[] = "4433007711";
 
 	while (str[i] != '\0')
 	{
+		j = 0;
 		while (find[j] != '\0')
 		{
 			if (str[i] == find[j])

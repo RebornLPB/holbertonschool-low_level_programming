@@ -20,6 +20,7 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		tmp = 0;
 		found = 0;
+		b = 0;
 		while (accept[b] != '\0')
 		{
 			if (accept[b] == s[a])

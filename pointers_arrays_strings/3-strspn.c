@@ -31,19 +31,3 @@ unsigned int _strspn(char *s, char *accept)
 	}
 	return (found);
 }
-
-
-
-
-Déclarer un compteur principal (pour le retour) et tes variables d'index (i et j).
-
-Lancer une boucle while sur s[i].
-
-À chaque début de tour, remettre un flag found à 0.
-
-Lancer une boucle while ou for sur accept[j].
-
-Si match, mettre found = 1 et break.
-
-Après la boucle de accept, vérifier found. Si c'est 0, renvoyer le compteur. 
-Sinon, incrémenter le compteur et passer à s[i+1].

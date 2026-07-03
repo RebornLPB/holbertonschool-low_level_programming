@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-/* main - entry point for the simple calculator program */
 int main(void)
 {
     int choice = -1;
@@ -17,15 +16,13 @@ int main(void)
     {
         printf("Simple Calculator\n");
         printf("1) Add\n2) Subtract\n3) Multiply\n4) Divide\n0) Quit\n");
-        printf("Choice: ");
+        printf("Choice: \n");
 
-        /* Si scanf ne renvoie pas 1, l'entrée est invalide (ex: une lettre) */
         if (scanf("%d", &choice) != 1)
         {
             printf("Invalid choice\n");
-            /* Nettoyage du tampon stdin pour consommer les caractères invalides */
             while ((c = getchar()) != '\n' && c != EOF);
-            continue; /* On recommence la boucle du menu */
+            continue;
         }
 
         if (choice == 1)

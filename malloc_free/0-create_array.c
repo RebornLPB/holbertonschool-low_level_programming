@@ -16,7 +16,9 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 	unsigned int i;
-	char *tableau = malloc(sizeof(char) * size);
+	char *tableau;
+
+	tableau = malloc(sizeof(char) * size);
 
 	if (tableau == NULL)
 	{

@@ -11,12 +11,13 @@
 
 char *create_array(unsigned int size, char c)
 {
+	unsigned int i;
+	char *tableau;
+
 	if (size == 0)
 	{
 		return (NULL);
 	}
-	unsigned int i;
-	char *tableau;
 
 	tableau = malloc(sizeof(char) * size);
 

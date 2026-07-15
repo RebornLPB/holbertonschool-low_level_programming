@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "user_input.h"
+#include "session.h"
+
+/**
+ * main - entry point for secure input program
+ *
+ * Return: 0 on success, 1 on failure
+ */
+int main(void)
+{
+	char *username = NULL;
+	session_t *session = NULL;
+
+	printf("Enter username: ");
+	username = read_username();
+
+	if (username == NULL)
+	{
+		printf("Failed to read username\n");
+		return (1);
+	}
+
+	session = session_create(username);
+	if (session == NULL)
+	{
+		printf("Failed to create session\n");
+		free(username);
+		return (1);
+	}
+
+	session_print(session);
+
+	printf("Goodbye %s\n", username);
+
+	session_destroy(session);
+
+	return (0);
+}

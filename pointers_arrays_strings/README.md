@@ -1,36 +1,22 @@
 # C - Pointers, arrays and strings
 
 ## Description
-This project focuses on understanding and manipulating pointers, arrays, and strings within the C programming language. It covers memory addressing, call-by-reference operations, array index traversal, and buffer handling for string operations. All functions are developed to strictly comply with the Betty coding style.
+This project covers foundational concepts in C programming regarding memory addresses, pointer arithmetic, array manipulation, and string handling. It explores how pointers reference variables, how strings are stored in contiguous memory blocks terminated by a null byte (`\0`), and how standard C library functions (like `strcpy`, `strcat`, `strchr`, `memset`, `memcpy`) operate under the hood.
 
-## Learning Objectives
-* Understand what pointers are and how to use them.
-* Learn the differences between function parameters and arguments.
-* Understand call by value versus call by reference.
-* Master array manipulation and pointer arithmetic.
-* Understand what strings are and how to safely handle string buffers.
+All source code is written to strictly comply with the **Betty coding style**.
 
-## Requirements
+## 📝 Learning Objectives
+* Understand what pointers are, how to declare them, and how to dereference memory addresses.
+* Learn the intimate relationship between pointers, arrays, and string literals in C.
+* Master pointer arithmetic and character array iterations without using array indexing where required.
+* Learn how to manipulate multi-dimensional arrays (such as 2D chessboards and matrix diagonals).
+* Replicate standard standard C string operations safely.
+
+## 🛠️ Requirements & Engineering Constraints
 * **OS:** Ubuntu 20.04 LTS
-* **Compiler:** `gcc` (Flags: `-Wall -Werror -Wextra -pedantic -std=gnu89`)
-* **Coding Style:** Strict compliance with the Betty Style Guide (`betty-style.pl` and `betty-doc.pl`).
-
-## Prototypes Summary
-All custom function prototypes used throughout this project are declared in the `main.h` header file:
-
-| Prototype | Description |
-| --- | --- |
-| `void reset_to_98(int *n);` | Updates the value an `int` pointer points to to `98`. |
-| `void swap_int(int *a, int *b);` | Swaps the values of two integers using pointers. |
-| `int _strlen(char *s);` | Returns the length of a string. |
-| `void _puts(char *str);` | Prints a string, followed by a new line, to `stdout`. |
-| `void print_rev(char *s);` | Prints a string in reverse, followed by a new line. |
-| `void rev_string(char *s);` | Reverses a string in-place. |
-| `void puts2(char *str);` | Prints every other character of a string, starting with the first one. |
-| `void puts_half(char *str);` | Prints the second half of a string, followed by a new line. |
-| `void print_array(int *a, int n);` | Prints `n` elements of an array of integers. |
-| `char *_strcpy(char *dest, char *src);` | Copies the string pointed to by `src` into the `dest` buffer. |
-| `int _atoi(char *s);` | Converts a string representation of an integer to an actual `int`. |
+* **Compiler:** `gcc` (Compilation flags: `-Wall -Werror -Wextra -pedantic -std=gnu89`)
+* **Coding Style:** 100% compliant with the Betty Style Guide (`betty-style.pl` and `betty-doc.pl`).
+* **Header File:** All function prototypes must be declared in the `main.h` header file.
 
 ## 📁 File List & Tasks Directory
 
@@ -47,10 +33,30 @@ All custom function prototypes used throughout this project are declared in the 
 | `8-print_array.c` | 8. Arrays are not pointers | Prints a comma-and-space separated list of elements from an integer array. |
 | `9-strcpy.c` | 9. strcpy | Emulates the native `strcpy` behavior including the terminating null byte (`\0`). |
 | `100-atoi.c` | 10. Great leaders are willing... | Advanced task: Parses strings to extract numbers, taking signs into account. |
+| `0-memset.c` | memset | Fills memory with a constant byte. |
+| `1-memcpy.c` | memcpy | Copies memory area from source to destination. |
+| `2-strchr.c` | strchr | Locates a character in a string. |
+| `3-strspn.c` | strspn | Gets the length of a prefix substring. |
+| `4-strpbrk.c` | strpbrk | Searches a string for any of a set of bytes. |
+| `5-strstr.c` | strstr | Locates a substring within a string. |
+| `0-strcat.c` | strcat | Concatenates two strings together. |
+| `1-strncat.c` | strncat | Concatenates two strings using at most `n` bytes from `src`. |
+| `2-strncpy.c` | strncpy | Copies a string up to `n` bytes. |
+| `3-strcmp.c` | strcmp | Compares two strings. |
+| `4-rev_array.c` | reverse array | Reverses the content of an array of integers. |
+| `5-string_toupper.c` | string toupper | Changes all lowercase letters of a string to uppercase. |
+| `6-cap_string.c` | cap string | Capitalizes all words of a string. |
+| `7-leet.c` | leet | Encodes a string into 1337 (Leet Speak). |
+| `7-print_chessboard.c` | print chessboard | Prints an 8x8 chessboard 2D array. |
+| `8-print_diagsums.c` | print diagsums | Prints the sum of the two diagonals of a square matrix of integers. |
+
+---
 
 ## 🚀 Compilation & Testing
+
 To compile a specific routine along with its standard test main block (e.g., `1-main.c` and `1-swap.c`), run:
 
 ```bash
-gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-swap.c -o 1-swap
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 1-main.c 1-swap.c -o 1-swap
 ./1-swap
+```

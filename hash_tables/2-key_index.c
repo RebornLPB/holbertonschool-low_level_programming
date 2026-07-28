@@ -1,6 +1,5 @@
 #include "hash_tables.h"
 #include <stddef.h>
-#include "1-djb2.c"
 
 /**
  * key_index - maps a key to an index in the array of a hash table

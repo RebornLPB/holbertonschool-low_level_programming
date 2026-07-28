@@ -1,5 +1,4 @@
 #include "hash_tables.h"
-#include <stddef.h>
 
 /**
  * key_index - maps a key to an index in the array of a hash table

@@ -2,74 +2,107 @@
 #include <string.h>
 #include "store.h"
 
+/**
+ * store_init - Initializes a session store
+ * @st: Pointer to store structure
+ */
 void store_init(store_t *st)
 {
 	if (st)
 		st->head = NULL;
 }
 
-static node_t *node_create(session_t *s)
-{
-	node_t *n = (node_t *)malloc(sizeof(*n));
-	if (!n)
-		return NULL;
-	n->sess = s;
-	n->next = NULL;
-	return n;
-}
-
+/**
+ * store_add - Adds a session to the store safely handling failure cleanup
+ * @st: Pointer to store structure
+ * @s: Pointer to session object
+ *
+ * Return: 1 on success, 0 on failure
+ */
 int store_add(store_t *st, session_t *s)
 {
 	node_t *n, *cur;
 
 	if (!st || !s || !s->id)
-		return 0;
+	{
+		if (s)
+			session_destroy(s);
+		return (0);
+	}
 
 	cur = st->head;
-	while (cur) {
+	while (cur)
+	{
 		if (cur->sess && cur->sess->id && strcmp(cur->sess->id, s->id) == 0)
-			return 0;
+		{
+			session_destroy(s);
+			return (0);
+		}
 		cur = cur->next;
 	}
 
-	n = node_create(s);
-	if (!n) {
-		return 0;
+	n = (node_t *)malloc(sizeof(*n));
+	if (!n)
+	{
+		session_destroy(s);
+		return (0);
 	}
+	n->sess = s;
 
 	n->next = st->head;
 	st->head = n;
-	return 1;
+	return (1);
 }
 
+/**
+ * store_get - Retrieves a session by ID
+ * @st: Pointer to store structure
+ * @id: String identifier to search for
+ *
+ * Return: Pointer to matching session_t, or NULL if not found
+ */
 session_t *store_get(store_t *st, const char *id)
 {
 	node_t *cur;
 
 	if (!st || !id)
-		return NULL;
+		return (NULL);
 
 	cur = st->head;
-	while (cur) {
+	while (cur)
+	{
 		if (cur->sess && cur->sess->id && strcmp(cur->sess->id, id) == 0)
-			return cur->sess;
+			return (cur->sess);
 		cur = cur->next;
 	}
-	return NULL;
+	return (NULL);
 }
 
+/**
+ * store_delete - Safely deletes a session by ID from the store
+ * @st: Pointer to store structure
+ * @id: String identifier of session to delete
+ * @out: Pointer to store extracted session pointer (or NULL to destroy it)
+ *
+ * Return: 1 if deleted, 0 if not found
+ */
 int store_delete(store_t *st, const char *id, session_t **out)
 {
 	node_t *cur, *prev;
 
+	if (out)
+		*out = NULL;
+
 	if (!st || !id)
-		return 0;
+		return (0);
 
 	prev = NULL;
 	cur = st->head;
 
-	while (cur) {
-		if (cur->sess && cur->sess->id && strcmp(cur->sess->id, id) == 0) {
+	while (cur)
+	{
+		if (cur->sess && cur->sess->id && strcmp(cur->sess->id, id) == 0)
+		{
 			if (prev)
 				prev->next = cur->next;
 			else
@@ -77,34 +110,36 @@ int store_delete(store_t *st, const char *id, session_t **out)
 
 			if (out)
 				*out = cur->sess;
+			else
+				session_destroy(cur->sess);
 
-			session_destroy(cur->sess);
 			free(cur);
-			return 1;
+			return (1);
 		}
 		prev = cur;
 		cur = cur->next;
 	}
 
-	return 0;
+	return (0);
 }
 
+/**
+ * store_destroy - Frees all memory associated with the store safely
+ * @st: Pointer to store structure
+ */
 void store_destroy(store_t *st)
 {
-	node_t *cur, *next;
+	node_t *cur;
 
 	if (!st)
 		return;
 
-	cur = st->head;
-	while (cur) {
-		next = cur->next;
-
-		session_destroy(cur->sess);
-
+	while (st->head)
+	{
+		cur = st->head;
+		st->head = cur->next;
+		if (cur->sess)
+			session_destroy(cur->sess);
 		free(cur);
-
-		cur = next;
 	}
-	st->head = NULL;
 }

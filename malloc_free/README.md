@@ -27,6 +27,7 @@ All functions are written to pass the strict **Betty coding style** validation.
 | `2-str_concat.c` | 2. He who is not courageous enough... | Concatenates two strings into a newly dynamically allocated space in memory. |
 | `3-alloc_grid.c` | 3. If you even dream of beating me... | Returns a pointer to a 2-dimensional array of integers initialized to 0. |
 | `4-free_grid.c` | 4. It's not bragging if you can back it up | Frees a 2-dimensional grid previously created by your `alloc_grid` function. |
+| `main.h` | Header file | Prototypes of the functions above. |
 
 ## 🚀 Compilation & Testing
 
@@ -35,3 +36,4 @@ To compile your functions with a test main file (e.g., `2-main.c` and `2-str_con
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 2-main.c 2-str_concat.c -o 2-str_concat
 ./2-str_concat
+```

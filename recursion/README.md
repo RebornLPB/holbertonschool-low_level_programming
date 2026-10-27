@@ -40,3 +40,4 @@ To compile a specific recursive routine along with its standard test main file (
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 _putchar.c 3-main.c 3-factorial.c -o 3-factorial
 ./3-factorial
+```

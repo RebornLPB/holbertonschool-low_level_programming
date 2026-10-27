@@ -37,3 +37,4 @@ This project deepens C programming logic by focusing on variable manipulation, c
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 2-print_alphabet.c -o alphabet
 ./alphabet
+```

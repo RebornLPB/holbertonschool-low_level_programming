@@ -24,7 +24,7 @@ The main objective of this track is to understand what happens under the hood of
 | **`variables_if_else_while`** | Control flow, arithmetic & logical operators, loops | `0-positive_or_negative.c`, `1-last_digit.c` |
 | **`functions_nested_loops`** | Functions, headers, variable scopes, nested loops | `_putchar`, `print_alphabet`, `print_times_table` |
 | **`more_functions_nested_loops`** | Character classification, numbers, math algorithms | `_isupper`, `_isdigit`, `mul`, `print_line` |
-| **`intro_debugging`** | Isolating logic errors, handling edge cases, infinite loops | `0-main.c`, `2-largest_number.c`, `3-leap_year.c` |
+| **`intro_debugging`** | Isolating logic errors, handling edge cases, loop conditions | `sum_to_n.c`, `row_sums.c`, `multiplication_table.c` |
 | **`pointers_arrays_strings`** | Pointers, arrays, memory addresses, string manipulation | `reset_to_98`, `_strlen`, `_strcpy`, `_memset`, `_strchr` |
 | **`recursion`** | Base cases, call stack memory, recursive operations | `_puts_recursion`, `_factorial`, `_pow_recursion` |
 | **`argc_argv`** | Command-line parameters, string-to-number conversion | `0-whatsmyname`, `3-mul.c`, `4-add.c` |
@@ -33,10 +33,17 @@ The main objective of this track is to understand what happens under the hood of
 | **`function_pointers`** | Dynamic dispatch, function callbacks, mapping structures | `array_iterator`, `int_index`, `3-calc.c` |
 | **`variadic_functions`** | Variable arguments using `<stdarg.h>` (`va_list`, `va_arg`) | `sum_them_all`, `print_numbers`, `print_all` |
 | **`_printf`** *(Team Project)* | Custom implementation of `printf` formatted output | `_printf.c`, specifiers lookup, buffer handling |
+| **`structures_typedef`** | `struct`, `typedef`, dot vs arrow operators, heap-allocated structs | `init_dog`, `print_dog`, `new_dog`, `free_dog` |
 | **`singly_linked_lists`** | Dynamic data structures, node insertion, list traversal | `print_list`, `add_node`, `add_node_end`, `free_list` |
 | **`doubly_linked_lists`** | Bidirectional traversal (`prev`/`next`), node deletions | `print_dlistint`, `add_dnodeint`, `delete_dnodeint` |
 | **`hash_tables`** | Key-value pairs, DJB2 algorithm, collision chaining | `hash_table_create`, `hash_table_set`, `hash_table_get` |
-| **`dynamic_analysis`** | Dynamic profiling, runtime bug detection, memory inspection | Valgrind, GDB breakpoints, runtime tracing |
+| **`dynamic_analysis`** | Dynamic profiling, runtime bug detection, memory inspection | `source.c`, GDB breakpoints, Valgrind |
+| **`simple-calculator`** | `argc`/`argv` parsing, arithmetic, error handling | `calculator.c` |
+| **`benchmarking`** | Green computing, `clock()` micro-benchmarks, code instrumentation, algorithm comparison | `baseline_loop.c`, `comparison_algorithms.c`, `instrumentation_lab.c` |
+| **`ai_memory_visualizer_valgrind_tracer`** | Stack vs heap, use-after-free, memory leaks, crash analysis, critical review of AI explanations | `stack_example.c`, `heap_example.c`, `aliasing_example.c`, `crash_example.c` |
+| **`secure-input-memory-lab-main`** | Safe input handling and memory ownership (lab to analyse and patch) | `user_input.c`, `session.c`, `main.c` |
+| **`secure_data_handling`** | Ownership-safe session store, linked list, `realloc`, command-driven CLI | `session.c`, `store.c`, `main.c`, `Makefile` |
+| **`group_work_analyse`** | Array of structs on the heap, averages, freeing every allocation | `main.c` |
 
 ---
 
@@ -46,7 +53,7 @@ To clone this repository and test a specific module:
 
 ```bash
 # Clone repository
-git clone [https://github.com/RebornLPB/holbertonschool-low_level_programming.git](https://github.com/RebornLPB/holbertonschool-low_level_programming.git)
+git clone https://github.com/RebornLPB/holbertonschool-low_level_programming.git
 cd holbertonschool-low_level_programming
 
 # Navigate to a specific project directory

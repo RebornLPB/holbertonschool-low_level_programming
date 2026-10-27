@@ -24,8 +24,9 @@ All functions are written to pass the strict **Betty coding style** validation.
 | :--- | :--- | :--- |
 | `0-malloc_checked.c` | 0. Trust no one | Allocates memory using `malloc`. If it fails, the process terminates normally with a status value of `98`. |
 | `1-string_nconcat.c` | 1. string_nconcat | Concatenates two strings up to `n` bytes of the second string into a newly allocated heap memory block. |
-| `2-_calloc.c` | 2. _calloc | Allocates memory for an array of elements using `malloc` and initializes all allocated bytes to `0`. |
+| `2-calloc.c` | 2. _calloc | Allocates memory for an array of elements using `malloc` and initializes all allocated bytes to `0`. |
 | `3-array_range.c` | 3. array_range | Creates an array of integers containing a sequential range of values from `min` to `max` (inclusive). |
+| `main.h` | Header file | Prototypes of the functions above. |
 
 ---
 
@@ -36,3 +37,4 @@ To compile your source files together with a designated test main template (e.g.
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 1-main.c 1-string_nconcat.c -o 1-string_nconcat
 ./1-string_nconcat
+```

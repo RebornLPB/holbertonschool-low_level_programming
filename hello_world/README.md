@@ -32,3 +32,4 @@ This project marks the beginning of learning the C programming language and the 
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 4-puts.c -o puts
 ./puts
+```

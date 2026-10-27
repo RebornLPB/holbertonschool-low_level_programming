@@ -53,3 +53,4 @@ To compile any given task file along with its main tester file (e.g., `0-main.c`
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 0-main.c 0-isupper.c _putchar.c -o 0-isupper
 ./0-isupper
+```

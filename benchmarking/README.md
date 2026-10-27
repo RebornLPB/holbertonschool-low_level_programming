@@ -23,12 +23,22 @@ All source code and documentation comply with **Holberton School** standards and
 | :--- | :--- | :--- |
 | `baseline_loop-metrics.md` | Markdown Report | Analysis of standard loop structures, documenting baseline execution times, CPU cycle overheads, and initialization metrics. |
 | `comparison_algorithms-metrics.md` | Markdown Report | Comparative benchmark matrix contrasting different algorithmic implementations regarding space/time complexity and energy draw. |
+| `baseline_loop.c` | C Source Code | Baseline benchmark: times a 100-million-iteration loop with `clock()` and prints the iterations, elapsed seconds and result. |
+| `comparison_algorithms.c` | C Source Code | Compares two ways of counting even numbers in a 50,000-element array (nested-loop approach vs single pass) and prints each result and execution time. |
 | `instrumentation_lab.c` | C Source Code | Core laboratory file containing C routines equipped with custom instrumentation hooks to track high-resolution performance data. |
 | `green_efficiency_analysis.md` | Markdown Report | Final synthesis report compiling eco-efficiency conclusions, optimization recommendations, and Green IT takeaways. |
 
 ## 🚀 Compilation & Testing
 
-To compile the instrumented C laboratory file along with its headers and main routine, execute:
+Each C file is a standalone program with its own `main` (`baseline_loop.c` uses `unsigned long long`, so it needs `-std=gnu99`):
 
 ```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 main.c instrumentation_lab.c -o dynamic_bench
+gcc -Wall -Werror -Wextra -pedantic -std=gnu99 baseline_loop.c -o baseline_loop
+./baseline_loop
+
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 comparison_algorithms.c -o comparison_algorithms
+./comparison_algorithms
+
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 instrumentation_lab.c -o instrumentation_lab
+./instrumentation_lab
+```

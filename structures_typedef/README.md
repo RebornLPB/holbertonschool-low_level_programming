@@ -38,3 +38,4 @@ To compile your structure manipulation routines with a test main template (e.g.,
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 main.c 2-print_dog.c -o print_dog
 ./print_dog
+```

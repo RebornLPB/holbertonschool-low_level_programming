@@ -27,3 +27,4 @@ To compile the calculator, run the following standard command:
 
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 calculator.c -o calc
+```

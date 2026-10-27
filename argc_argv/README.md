@@ -36,3 +36,4 @@ To compile any of these programs, execute the following command:
 
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 3-mul.c -o mul
+```

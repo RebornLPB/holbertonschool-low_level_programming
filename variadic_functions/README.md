@@ -37,3 +37,4 @@ To compile a variadic printing routine along with a standard test main template 
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 2-main.c 2-print_strings.c -o 2-print_strings
 ./2-print_strings
+```

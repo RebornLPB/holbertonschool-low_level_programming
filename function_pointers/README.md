@@ -36,3 +36,4 @@ To compile a basic iterator or searching routine along with a standard test main
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 1-main.c 1-array_iterator.c -o 1-iter
 ./1-iter
+```
